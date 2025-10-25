@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+cad.db
+.env
+backend/.venv
+node_modules
+dist
+.vite
+frontend/cad-dashboard/node_modules
+frontend/cad-dashboard/dist
