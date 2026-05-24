@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escuela Sindical | Plataforma</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="hero">
+    <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1600&auto=format&fit=crop">
+      <source src="https://cdn.coverr.co/videos/coverr-people-working-together-1579/1080p.mp4" type="video/mp4">
+    </video>
+    <div class="overlay"></div>
+    <nav class="topnav">
+      <div class="brand">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/No_Image_Available.jpg/120px-No_Image_Available.jpg" alt="logo" />
+        <div>
+          <h1>ESCUELA SINDICAL</h1>
+          <p>Aprendamos Luchando</p>
+        </div>
+      </div>
+      <div class="actions">
+        <button id="btnLogin" class="btn">Ingresar</button>
+      </div>
+    </nav>
+    <section class="hero-content">
+      <h2>Formación sindical moderna, colaborativa y práctica</h2>
+      <p>Administra cursos, clases con YouTube y un módulo de descargas para documentos, videos y PDFs.</p>
+      <a href="#curso" class="btn btn-primary">Ver programa</a>
+    </section>
+  </header>
+
+  <main class="container">
+    <section id="curso" class="card">
+      <h3>Escuela Sindical Aprendamos Luchando</h3>
+      <p><strong>Objetivo:</strong> Generar conocimiento de estrategias de lucha y organización, funcionamiento del estado y gestión práctica del trabajo sindical.</p>
+      <p><strong>Horario:</strong> 16:30 a 18:30 hrs, una vez por semana.</p>
+      <div id="lessons" class="grid"></div>
+    </section>
+
+    <section class="card">
+      <div class="section-title">
+        <h3>Descargas</h3>
+      </div>
+      <div id="downloads" class="downloads"></div>
+    </section>
+  </main>
+
+  <div id="loginModal" class="modal hidden">
+    <div class="modal-content">
+      <h3>Iniciar sesión</h3>
+      <form id="loginForm">
+        <label>Email</label>
+        <input type="email" id="email" required />
+        <label>Contraseña</label>
+        <input type="password" id="password" required />
+        <button class="btn btn-primary" type="submit">Entrar</button>
+      </form>
+      <small>Solo el administrador puede crear usuarios.</small>
+    </div>
+  </div>
+
+  <div id="adminPanel" class="modal hidden">
+    <div class="modal-content wide">
+      <h3>Panel Administrador</h3>
+      <div class="tabs">
+        <button class="tab active" data-tab="users">Usuarios</button>
+        <button class="tab" data-tab="videos">Videos YouTube</button>
+        <button class="tab" data-tab="docs">Descargas</button>
+      </div>
+
+      <section id="tab-users" class="tab-content active">
+        <h4>Crear usuario (solo admin)</h4>
+        <form id="userForm" class="inline-form">
+          <input id="newName" placeholder="Nombre" required />
+          <input id="newEmail" placeholder="Email" type="email" required />
+          <input id="newPass" placeholder="Contraseña" type="password" required />
+          <button class="btn btn-primary">Crear</button>
+        </form>
+        <ul id="userList"></ul>
+      </section>
+
+      <section id="tab-videos" class="tab-content">
+        <h4>Asignar video YouTube a clase</h4>
+        <form id="videoForm" class="inline-form">
+          <select id="lessonSelect"></select>
+          <input id="youtubeUrl" placeholder="https://www.youtube.com/watch?v=..." required />
+          <button class="btn btn-primary">Guardar video</button>
+        </form>
+      </section>
+
+      <section id="tab-docs" class="tab-content">
+        <h4>Agregar enlace de descarga</h4>
+        <form id="downloadForm" class="inline-form">
+          <input id="downloadTitle" placeholder="Título" required />
+          <select id="downloadType">
+            <option>pdf</option><option>doc</option><option>video</option><option>link</option>
+          </select>
+          <input id="downloadUrl" placeholder="https://..." required />
+          <button class="btn btn-primary">Agregar</button>
+        </form>
+      </section>
+      <button id="closeAdmin" class="btn">Cerrar</button>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

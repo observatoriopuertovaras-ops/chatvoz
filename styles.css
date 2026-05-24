@@ -1,0 +1,12 @@
+:root{--bg:#0b1220;--card:#121a2b;--green:#14b86e;--text:#e8edf6;--muted:#9fb0c9}
+*{box-sizing:border-box}body{margin:0;font-family:Inter,sans-serif;background:linear-gradient(180deg,#09101d,#0f1728);color:var(--text)}
+.hero{position:relative;height:65vh;min-height:420px;overflow:hidden}.hero-video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.overlay{position:absolute;inset:0;background:rgba(2,9,19,.6)}
+.topnav,.hero-content{position:relative;z-index:2}.topnav{display:flex;justify-content:space-between;align-items:center;padding:1rem 2rem}.brand{display:flex;gap:12px;align-items:center}.brand img{width:56px;height:56px;border-radius:50%}.brand h1{margin:0;font-size:1.1rem}.brand p{margin:.1rem 0 0;color:var(--muted)}
+.hero-content{max-width:760px;padding:4rem 2rem}.hero-content h2{font-size:2.2rem;margin:0 0 .5rem}.hero-content p{color:#d8e0ee}
+.container{max-width:1100px;margin:-50px auto 40px;padding:0 1rem;position:relative;z-index:3}.card{background:rgba(18,26,43,.93);border:1px solid #23314f;border-radius:16px;padding:1rem;margin-bottom:1rem;backdrop-filter:blur(8px)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:10px}.lesson{background:#0d1628;padding:.8rem;border-radius:10px;border:1px solid #22365b}.lesson iframe{width:100%;height:130px;border:0;border-radius:8px}
+.downloads a{display:block;padding:.6rem;border-bottom:1px solid #22365b;color:#b9d7ff;text-decoration:none}
+.btn{border:1px solid #32496f;background:#15233d;color:white;padding:.55rem .9rem;border-radius:10px;cursor:pointer}.btn-primary{background:var(--green);border-color:#24d484;color:#00160b}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.65);display:flex;align-items:center;justify-content:center;z-index:8}.hidden{display:none}.modal-content{background:#111a2c;padding:1rem;border-radius:12px;width:min(480px,94vw)}.wide{width:min(900px,96vw)}
+input,select{background:#0c1423;border:1px solid #2a3d62;border-radius:8px;padding:.55rem;color:#e6efff}.inline-form{display:flex;gap:.5rem;flex-wrap:wrap}ul{padding-left:1rem}
+.tabs{display:flex;gap:.5rem;margin:.6rem 0}.tab{background:#1a2944}.tab.active{background:#2c4370}.tab-content{display:none}.tab-content.active{display:block}
